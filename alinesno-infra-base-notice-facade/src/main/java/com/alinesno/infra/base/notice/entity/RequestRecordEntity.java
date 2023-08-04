@@ -18,7 +18,6 @@ import cn.afterturn.easypoi.excel.annotation.Excel;
  * @author WeiXiaoJin
  * @since 2019年4月8日 下午10:15:43
  */
-@SuppressWarnings("serial")
 @TableName("manager_account_record")
 public class RequestRecordEntity extends InfraBaseEntity {
 	
