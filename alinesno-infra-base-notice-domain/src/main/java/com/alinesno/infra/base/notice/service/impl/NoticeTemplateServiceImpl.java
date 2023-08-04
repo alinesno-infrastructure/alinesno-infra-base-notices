@@ -15,8 +15,8 @@ import org.springframework.stereotype.Service;
  * <在这里添加生成类的描述信息，一句话描述>
  *
  * @Service
- * @Author luoxiaodong
- * @Since 1.0.0
+ * @author luoxiaodong
+ * @since 1.0.0
  */
 @Service
 public class NoticeTemplateServiceImpl extends IBaseServiceImpl<NoticeTemplateEntity, NoticeTemplateMapper> implements INoticeTemplateService {

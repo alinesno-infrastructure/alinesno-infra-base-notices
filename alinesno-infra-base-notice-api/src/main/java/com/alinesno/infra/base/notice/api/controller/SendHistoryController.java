@@ -1,7 +1,6 @@
 package com.alinesno.infra.base.notice.api.controller;
 
 import com.alinesno.infra.base.notice.entity.SendHistoryEntity;
-import com.alinesno.infra.base.notice.service.INoticeTemplateService;
 import com.alinesno.infra.base.notice.service.ISendHistoryService;
 import com.alinesno.infra.common.core.constants.SpringInstanceScope;
 import com.alinesno.infra.common.core.rest.BaseController;

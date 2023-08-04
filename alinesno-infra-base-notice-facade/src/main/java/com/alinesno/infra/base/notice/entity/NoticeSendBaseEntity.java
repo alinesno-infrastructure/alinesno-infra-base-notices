@@ -2,7 +2,6 @@ package com.alinesno.infra.base.notice.entity;
 
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.time.LocalDateTime;
 

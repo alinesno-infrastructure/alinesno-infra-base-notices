@@ -9,8 +9,8 @@ import com.alinesno.infra.common.facade.services.IBaseService;
  *
  * <在这里添加生成类的描述信息，一句话描述>
  *
- * @Author luoxiaodong
- * @Since 1.0.0
+ * @author luoxiaodong
+ * @since 1.0.0
  */
 public interface IMsgResponseService extends IBaseService<MsgResponseEntity> {
 
