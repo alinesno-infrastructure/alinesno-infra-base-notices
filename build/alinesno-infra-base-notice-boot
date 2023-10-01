@@ -1,0 +1,23 @@
+2023-09-27T22:20:56.141+08:00  INFO 24100 --- [restartedMain] c.a.i.base.notice.BaseNoticeApplication  : Starting BaseNoticeApplication using Java 17.0.8 with PID 24100 (D:\project\vscode\alinesno\alinesno-infra-base-notices\alinesno-infra-base-notice-boot\target\classes started by 夏和圆周 in D:\project\vscode\alinesno\alinesno-infra-base-notices)
+2023-09-27T22:20:56.145+08:00 DEBUG 24100 --- [restartedMain] c.a.i.base.notice.BaseNoticeApplication  : Running with Spring Boot v3.1.2, Spring v6.0.11
+2023-09-27T22:20:56.146+08:00  INFO 24100 --- [restartedMain] c.a.i.base.notice.BaseNoticeApplication  : The following 5 profiles are active: "base", "security", "mybatis", "sa-token", "dev"
+2023-09-27T22:20:56.248+08:00  INFO 24100 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-27T22:20:56.249+08:00  INFO 24100 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-27T22:20:58.163+08:00  INFO 24100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-27T22:20:58.167+08:00  INFO 24100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-09-27T22:20:58.236+08:00  INFO 24100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+2023-09-27T22:21:00.001+08:00  WARN 24100 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-27T22:21:00.085+08:00  INFO 24100 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-09-27T22:21:00.087+08:00  INFO 24100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3836 ms
+2023-09-27T22:21:03.782+08:00  INFO 24100 --- [restartedMain] org.redisson.Version                     : Redisson 3.20.1
+2023-09-27T22:21:04.395+08:00  INFO 24100 --- [redisson-netty-2-4] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-09-27T22:21:04.492+08:00  INFO 24100 --- [redisson-netty-2-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-09-27T22:21:05.412+08:00  INFO 24100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-27T22:21:05.421+08:00  INFO 24100 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-09-27T22:21:05.561+08:00  INFO 24100 --- [restartedMain] io.undertow                              : starting server: Undertow - 2.3.7.Final
+2023-09-27T22:21:05.606+08:00  INFO 24100 --- [restartedMain] org.xnio                                 : XNIO version 3.8.10.Final
+2023-09-27T22:21:05.623+08:00  INFO 24100 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.8.Final
+2023-09-27T22:21:05.765+08:00  INFO 24100 --- [restartedMain] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2023-09-27T22:21:05.863+08:00  INFO 24100 --- [restartedMain] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 30104 (http)
+2023-09-27T22:21:05.885+08:00  INFO 24100 --- [restartedMain] c.a.i.base.notice.BaseNoticeApplication  : Started BaseNoticeApplication in 10.746 seconds (process running for 11.84)
+2023-09-27T22:22:35.048+08:00  INFO 24100 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.3.7.Final
