@@ -3,9 +3,9 @@ package com.alinesno.infra.base.notice.api.controller;
 import com.alinesno.infra.base.notice.entity.SendHistoryEntity;
 import com.alinesno.infra.base.notice.service.ISendHistoryService;
 import com.alinesno.infra.common.core.constants.SpringInstanceScope;
-import com.alinesno.infra.common.core.rest.BaseController;
 import com.alinesno.infra.common.facade.pageable.DatatablesPageBean;
 import com.alinesno.infra.common.facade.pageable.TableDataInfo;
+import com.alinesno.infra.common.web.adapter.rest.BaseController;
 import io.swagger.annotations.Api;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
@@ -49,7 +49,7 @@ public class SendHistoryController extends BaseController<SendHistoryEntity, ISe
 	@ResponseBody
 	@PostMapping("/datatables")
 	public TableDataInfo datatables(HttpServletRequest request, Model model, DatatablesPageBean page) {
-		return this.toDataInfo(model, this.getFeign(), page);
+		return this.toPage(model, this.getFeign(), page);
 	}
 
 	@Override
