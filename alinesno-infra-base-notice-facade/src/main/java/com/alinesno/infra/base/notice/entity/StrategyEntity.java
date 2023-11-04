@@ -1,5 +1,8 @@
 package com.alinesno.infra.base.notice.entity;
 
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
+import lombok.Data;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
@@ -10,115 +13,60 @@ import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
  * @since 1.0.0
  */
 @TableName("strategy") // 指定数据库表名
+@Data
 public class StrategyEntity extends InfraBaseEntity {
 
     // 策略名称
     @TableField("strategy_name")
+	@ColumnType(length=50)
+	@ColumnComment("策略名称")
     private String strategyName;
 
     // 策略ID
     @TableField("strategy_id")
+	@ColumnType(length=10)
+	@ColumnComment("策略ID")
     private String strategyId;
 
     // 重复发送次数
     @TableField("retry_count")
+	@ColumnType(length=2)
+	@ColumnComment("重试次数")
     private Integer retryCount;
 
     // 定时任务
     @TableField("scheduled_task")
+	@ColumnType(length=255)
+	@ColumnComment("定时任务")
     private String scheduledTask;
 
     // 发送批次
     @TableField("send_batch")
+	@ColumnType(length=10)
+	@ColumnComment("发送批次")
     private String sendBatch;
 
     // 消息是否备份
     @TableField("backup_message")
+	@ColumnType(length=255)
+	@ColumnComment("备份消息")
     private Boolean backupMessage;
 
     // 延迟发送时间
     @TableField("delay_send_time")
+	@ColumnType(length=8)
+	@ColumnComment("延迟发送时间")
     private Long delaySendTime;
 
     // 是否报警
     @TableField("enable_alert")
+	@ColumnType(length=1)
+	@ColumnComment("启用警报")
     private Boolean enableAlert;
 
     // 限流方式（每分钟发送的条数）
     @TableField("rate_limit")
+	@ColumnType(length=10)
+	@ColumnComment("速率限制")
     private Integer rateLimit;
-
-    // 省略了构造函数、getter 和 setter 方法
-
-    public String getStrategyId() {
-        return strategyId;
-    }
-
-    public void setStrategyId(String strategyId) {
-        this.strategyId = strategyId;
-    }
-
-    public Integer getRetryCount() {
-        return retryCount;
-    }
-
-    public void setRetryCount(Integer retryCount) {
-        this.retryCount = retryCount;
-    }
-
-    public String getScheduledTask() {
-        return scheduledTask;
-    }
-
-    public void setScheduledTask(String scheduledTask) {
-        this.scheduledTask = scheduledTask;
-    }
-
-    public String getSendBatch() {
-        return sendBatch;
-    }
-
-    public void setSendBatch(String sendBatch) {
-        this.sendBatch = sendBatch;
-    }
-
-    public Boolean getBackupMessage() {
-        return backupMessage;
-    }
-
-    public void setBackupMessage(Boolean backupMessage) {
-        this.backupMessage = backupMessage;
-    }
-
-    public Long getDelaySendTime() {
-        return delaySendTime;
-    }
-
-    public void setDelaySendTime(Long delaySendTime) {
-        this.delaySendTime = delaySendTime;
-    }
-
-    public Boolean getEnableAlert() {
-        return enableAlert;
-    }
-
-    public void setEnableAlert(Boolean enableAlert) {
-        this.enableAlert = enableAlert;
-    }
-
-    public Integer getRateLimit() {
-        return rateLimit;
-    }
-
-    public void setRateLimit(Integer rateLimit) {
-        this.rateLimit = rateLimit;
-    }
-
-    public String getStrategyName() {
-        return strategyName;
-    }
-
-    public void setStrategyName(String strategyName) {
-        this.strategyName = strategyName;
-    }
 }

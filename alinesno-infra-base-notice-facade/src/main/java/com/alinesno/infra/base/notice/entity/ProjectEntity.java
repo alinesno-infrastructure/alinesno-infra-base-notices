@@ -1,5 +1,8 @@
 package com.alinesno.infra.base.notice.entity;
 
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
+import lombok.Data;
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -11,94 +14,46 @@ import com.baomidou.mybatisplus.annotation.TableName;
  * @version 1.0.0
  */
 @TableName("project")
+@Data
 public class ProjectEntity extends InfraBaseEntity {
  
 	@TableField("type")
+	@ColumnType(length=255)
+	@ColumnComment("Project")
 	private String type; // 应用类型
 
 	@TableField("version")
+	@ColumnType(length=2)
+	@ColumnComment("版本")
 	private String version; // 应用版本号
 
 	@TableField("name")
+	@ColumnType(length=255)
+	@ColumnComment("无法确定")
 	private String name; // 应用名称
 
 	@TableField("banner")
+	@ColumnType(length=255)
+	@ColumnComment("横幅")
 	private String banner; // 标识图标
 
 	@TableField("icon")
+	@ColumnType(length=50)
+	@ColumnComment("图标")
 	private String icon; // 应用icon
 
 	@TableField("remark")
+	@ColumnType(length=255)
+	@ColumnComment("备注")
 	private String remark; // 应用备注
 
 	@TableField("open_key")
+	@ColumnType(length=255)
+	@ColumnComment("开放密钥")
 	private String openKey; // 应用代码
 
 	@TableField("code")
+	@ColumnType(length=255)
+	@ColumnComment("代码")
 	private String code; // 应用代码
- 
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getVersion() {
-		return version;
-	}
-
-	public void setVersion(String version) {
-		this.version = version;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getBanner() {
-		return banner;
-	}
-
-	public void setBanner(String banner) {
-		this.banner = banner;
-	}
-
-	public String getIcon() {
-		return icon;
-	}
-
-	public void setIcon(String icon) {
-		this.icon = icon;
-	}
-
-	public String getRemark() {
-		return remark;
-	}
-
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
-
-	public String getOpenKey() {
-		return openKey;
-	}
-
-	public void setOpenKey(String openKey) {
-		this.openKey = openKey;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
- 
 }
