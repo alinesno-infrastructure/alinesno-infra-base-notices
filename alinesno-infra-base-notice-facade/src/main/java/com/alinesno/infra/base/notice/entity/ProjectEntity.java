@@ -1,12 +1,11 @@
 package com.alinesno.infra.base.notice.entity;
 
-import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
 import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
+import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 
 /**
  * Project Entity
@@ -14,7 +13,6 @@ import lombok.EqualsAndHashCode;
  * @author LuoXiaoDong
  * @version 1.0.0
  */
-@EqualsAndHashCode(callSuper = true)
 @TableName("project")
 @Data
 public class ProjectEntity extends InfraBaseEntity {
@@ -31,7 +29,7 @@ public class ProjectEntity extends InfraBaseEntity {
 
 	@TableField("name")
 	@ColumnType(length=255)
-	@ColumnComment("应用名称")
+	@ColumnComment("无法确定")
 	private String name; // 应用名称
 
 	@TableField("banner")
