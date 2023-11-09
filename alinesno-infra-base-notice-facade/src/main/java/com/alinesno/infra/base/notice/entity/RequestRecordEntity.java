@@ -1,19 +1,18 @@
 package com.alinesno.infra.base.notice.entity;
 
+import cn.afterturn.easypoi.excel.annotation.Excel;
+import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
 import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
 import lombok.Data;
-import java.util.Date;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.Basic;
 import javax.persistence.FetchType;
 import javax.persistence.Lob;
-
-import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
-
-import cn.afterturn.easypoi.excel.annotation.Excel;
+import java.util.Date;
 
 /**
  * 用户操作记录和请求记录
@@ -21,7 +20,8 @@ import cn.afterturn.easypoi.excel.annotation.Excel;
  * @author WeiXiaoJin
  * @since 2019年4月8日 下午10:15:43
  */
-@TableName("manager_account_record")
+@EqualsAndHashCode(callSuper = true)
+@TableName("request_record")
 @Data
 public class RequestRecordEntity extends InfraBaseEntity {
 	

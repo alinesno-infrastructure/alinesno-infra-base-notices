@@ -1,10 +1,12 @@
 package com.alinesno.infra.base.notice.entity;
+
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
 import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
 import lombok.Data;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.EqualsAndHashCode;
 
 import java.util.Date;
 
@@ -13,6 +15,7 @@ import java.util.Date;
  * @author luoxiaodong
  * @since 1.0.0
  */
+@EqualsAndHashCode(callSuper = true)
 @TableName("notice_summary") // 指定数据库表名
 @Data
 public class NoticeSummaryEntity extends InfraBaseEntity {

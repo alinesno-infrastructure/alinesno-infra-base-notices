@@ -9,5 +9,5 @@ import com.baomidou.mybatisplus.annotation.TableName;
  * @since 1.0.0
  */
 @TableName("notice_send_history") // 指定数据库表名
-public class SendHistoryEntity extends InfraBaseEntity {
+public class SendHistoryEntity extends NoticeSendBaseEntity {
 }

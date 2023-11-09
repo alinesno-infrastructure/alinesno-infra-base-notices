@@ -1,17 +1,19 @@
 package com.alinesno.infra.base.notice.entity;
 
+import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
 import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
 import lombok.Data;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
+import lombok.EqualsAndHashCode;
 
 /**
  * 发送策略对象
  * @author luoxiaodong
  * @since 1.0.0
  */
+@EqualsAndHashCode(callSuper = true)
 @TableName("strategy") // 指定数据库表名
 @Data
 public class StrategyEntity extends InfraBaseEntity {
