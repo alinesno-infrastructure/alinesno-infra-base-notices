@@ -1,4 +1,4 @@
-package com.alinesno.infra.base.notice.service.channel;
+package com.alinesno.infra.base.notice.channel;
 
 import java.io.InputStream;
 import java.lang.reflect.Parameter;
