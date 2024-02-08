@@ -7,12 +7,17 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+/**
+ * 读取配置信息
+ */
 @Component
 public class ReadConfig implements SmsReadConfig {
 
     @Override
     public BaseConfig getSupplierConfig(String configId) {
-        //此处仅为示例，实际环境中，数据可以来自任意位置，
+
+        //此处仅为示例，实际环境中，数据可以来自任意位置
+
         return new UniConfig();
     }
 
@@ -20,6 +25,9 @@ public class ReadConfig implements SmsReadConfig {
     public List<BaseConfig> getSupplierConfigList() {
 
         //此处仅为示例，实际环境中，数据可以来自任意位置，
+
+
+
         return null;
     }
 }
