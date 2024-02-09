@@ -20,7 +20,7 @@ public interface SmsService {
      * @param message 要发送的文本消息内容
      * @return 短信发送响应对象
      */
-    SmsNoticeResponse sendMessage(String phone, String message);
+    SmsNoticeResponse sendMessage(String phone, String message , String configId);
 
     /**
      * 发送固定模板但含有多个模板参数的短信。

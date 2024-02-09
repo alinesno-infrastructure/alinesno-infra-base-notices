@@ -43,3 +43,5 @@ sa-token:
     get-data-url: ${sa-token.host-path}/sso/getData
   sign:
     secret-key:
+
+sms.isPrint: false

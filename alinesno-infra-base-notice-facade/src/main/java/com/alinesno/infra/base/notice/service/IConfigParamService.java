@@ -11,4 +11,11 @@ import com.alinesno.infra.common.facade.services.IBaseService;
  */
 public interface IConfigParamService extends IBaseService<ConfigParamEntity> {
 
+    /**
+     * 通过配置id获取到系统参数
+     * @param configId
+     * @return
+     */
+    ConfigParamEntity getByConfigId(String configId);
+
 }
