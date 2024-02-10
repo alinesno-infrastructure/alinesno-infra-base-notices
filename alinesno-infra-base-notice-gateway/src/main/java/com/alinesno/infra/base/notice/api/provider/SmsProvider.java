@@ -2,8 +2,8 @@ package com.alinesno.infra.base.notice.api.provider;
 
 import com.alinesno.infra.base.notice.api.dto.SmsSendDto;
 import com.alinesno.infra.base.notice.api.provider.base.BaseProvider;
-import com.alinesno.infra.base.notice.core.ratelimiter.RateLimiter;
 import com.alinesno.infra.base.notice.response.SmsNoticeResponse;
+import com.alinesno.infra.common.security.api.annotation.RateLimiter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
