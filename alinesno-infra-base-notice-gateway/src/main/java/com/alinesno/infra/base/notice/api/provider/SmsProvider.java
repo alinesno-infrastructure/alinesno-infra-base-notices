@@ -23,5 +23,10 @@ public class SmsProvider extends BaseProvider {
         return smsService.sendMessage(smsSend.getPhone(), smsSend.getMessage(), smsSend.getConfigId()) ;
     }
 
+    // 发送短信
+    @PostMapping("/sendMessageMap")
+    public SmsNoticeResponse sendMessageByMap(@RequestBody SmsSendDto smsSend){
+        return smsService.sendMessage(smsSend.getPhone(), smsSend.getMessageMap(), smsSend.getConfigId()) ;
+    }
 
 }

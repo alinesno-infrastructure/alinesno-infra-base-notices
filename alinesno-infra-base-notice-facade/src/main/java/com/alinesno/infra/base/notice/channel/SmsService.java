@@ -1,8 +1,10 @@
 package com.alinesno.infra.base.notice.channel;
 
 import com.alinesno.infra.base.notice.response.SmsNoticeResponse;
+
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 短信服务接口定义了发送短信的方法。
@@ -33,7 +35,7 @@ public interface SmsService {
      * @param messages 包含模板参数的键值对映射
      * @return 短信发送响应对象
      */
-    SmsNoticeResponse sendMessage(String phone, LinkedHashMap<String, String> messages);
+    SmsNoticeResponse sendMessage(String phone, Map<String, String> messages , String configId);
 
     /**
      * 使用指定的模板ID发送短信。

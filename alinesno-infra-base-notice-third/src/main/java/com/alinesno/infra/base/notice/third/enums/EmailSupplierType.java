@@ -1,4 +1,4 @@
-package com.alineson.infra.base.notice.third.enums;
+package com.alinesno.infra.base.notice.third.enums;
 
 public enum EmailSupplierType {
     /** 163邮箱 */

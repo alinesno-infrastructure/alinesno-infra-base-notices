@@ -18,7 +18,6 @@ import org.dromara.sms4j.tencent.config.TencentConfig;
 import org.dromara.sms4j.unisms.config.UniConfig;
 import org.dromara.sms4j.yunpian.config.YunpianConfig;
 import org.dromara.sms4j.zhutong.config.ZhutongConfig;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
@@ -84,9 +83,14 @@ public class NoticeSmsReadConfig implements SmsReadConfig {
             // 阿里云配置
             AlibabaConfig alibabaConfig = new AlibabaConfig();
 
-            BeanUtils.copyProperties(paramEntity , alibabaConfig);
-            log.debug("alibaba config = {}" , alibabaConfig);
+            alibabaConfig.setConfigId(type);
+            alibabaConfig.setAccessKeyId(paramEntity.getAccessKeyId());
+            alibabaConfig.setAccessKeySecret(paramEntity.getAccessKeySecret());
+            alibabaConfig.setSignature(paramEntity.getSignature());
+            alibabaConfig.setMaximum(paramEntity.getMaximum());
+            alibabaConfig.setTemplateId(paramEntity.getTemplateId());
 
+            log.debug("alibaba config = {}" , alibabaConfig);
 
             return alibabaConfig ;
         } else if (type.equals(CLOOPEN.getCode())) {
