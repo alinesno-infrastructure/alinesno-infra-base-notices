@@ -21,6 +21,11 @@
 			<artifactId>alinesno-infra-base-notice-facade</artifactId>
 			<version>${revision}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.alinesno.infra.base</groupId>
+			<artifactId>alinesno-infra-base-notice-core</artifactId>
+			<version>${revision}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.alinesno.infra.common</groupId>
@@ -28,6 +33,6 @@
 			<version>${revision}</version>
 		</dependency>
 
-	</dependencies>
+    </dependencies>
 
 </project>

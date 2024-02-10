@@ -2,6 +2,7 @@ package com.alinesno.infra.base.notice.api.provider;
 
 import com.alinesno.infra.base.notice.api.dto.SmsSendDto;
 import com.alinesno.infra.base.notice.api.provider.base.BaseProvider;
+import com.alinesno.infra.base.notice.core.ratelimiter.RateLimiter;
 import com.alinesno.infra.base.notice.response.SmsNoticeResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,7 @@ public class SmsProvider extends BaseProvider {
     }
 
     // 发送短信
+    @RateLimiter(key = "#smsSend.phone")
     @PostMapping("/sendMessageMap")
     public SmsNoticeResponse sendMessageByMap(@RequestBody SmsSendDto smsSend){
         return smsService.sendMessage(smsSend.getPhone(), smsSend.getMessageMap(), smsSend.getConfigId()) ;
