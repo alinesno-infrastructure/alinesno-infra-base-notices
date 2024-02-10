@@ -1,4 +1,4 @@
-package com.alineson.infra.base.notice.third.config;
+package com.alinesno.infra.base.notice.third.config;
 
 import com.alinesno.infra.base.notice.entity.ConfigParamEntity;
 import com.alinesno.infra.base.notice.service.IConfigParamService;
@@ -33,7 +33,7 @@ import static com.alinesno.infra.base.notice.enums.SmsProviderEnums.*;
  */
 @Slf4j
 @Component
-public class ReadConfig implements SmsReadConfig {
+public class NoticeSmsReadConfig implements SmsReadConfig {
 
     @Autowired
     private IConfigParamService configParamService ;
@@ -78,7 +78,7 @@ public class ReadConfig implements SmsReadConfig {
      * @return
      */
     public static BaseConfig convertConfigFromParam(ConfigParamEntity paramEntity) {
-        String type = paramEntity.getConfigType();
+        String type = paramEntity.getConfigId();
 
         if (type.equals(ALIYUN.getCode())) {
             // 阿里云配置
@@ -86,6 +86,7 @@ public class ReadConfig implements SmsReadConfig {
 
             BeanUtils.copyProperties(paramEntity , alibabaConfig);
             log.debug("alibaba config = {}" , alibabaConfig);
+
 
             return alibabaConfig ;
         } else if (type.equals(CLOOPEN.getCode())) {
