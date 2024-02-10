@@ -1,6 +1,7 @@
 package com.alinesno.infra.base.notice.entity;
 
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
+import com.alinesno.infra.common.security.mapper.AESEncryptHandler;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.gitee.sunchenbin.mybatis.actable.annotation.Column;
@@ -15,7 +16,7 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper = true)
 @ToString
 @Data
-@TableName("config_params") // 配置参数
+@TableName(value = "config_params" , autoResultMap = true) // 配置参数
 public class ConfigParamEntity extends InfraBaseEntity {
 
     @Column(comment = "类型工厂" , length = 64 , type = MySqlTypeConstant.VARCHAR)
@@ -23,22 +24,22 @@ public class ConfigParamEntity extends InfraBaseEntity {
     private String factory;
 
     @Column(comment = "连接密钥" , length = 64 , type = MySqlTypeConstant.VARCHAR)
-    @TableField("access_key_id")
+    @TableField(value = "access_key_id" , typeHandler = AESEncryptHandler.class)
     private String accessKeyId;
 
     @Column(comment = "应用id" , length = 64 , type = MySqlTypeConstant.VARCHAR)
-    @TableField("sdk_app_id")
+    @TableField(value = "sdk_app_id"  , typeHandler = AESEncryptHandler.class)
     private String sdkAppId;
 
-    @Column(comment = "应用密码" , length = 64 , type = MySqlTypeConstant.VARCHAR)
-    @TableField("access_key_secret")
+    @Column(comment = "应用密码" , length = 256 , type = MySqlTypeConstant.VARCHAR)
+    @TableField(value ="access_key_secret" , typeHandler = AESEncryptHandler.class)
     private String accessKeySecret;
 
     @Column(comment = "签名信息" , length = 64 , type = MySqlTypeConstant.VARCHAR)
-    @TableField("signature")
+    @TableField(value = "signature"  , typeHandler = AESEncryptHandler.class)
     private String signature;
 
-    @Column(comment = "模板id" , length = 64 , type = MySqlTypeConstant.VARCHAR)
+    @Column(comment = "模板id" , length = 32 , type = MySqlTypeConstant.VARCHAR)
     @TableField("template_id")
     private String templateId;
 
@@ -57,6 +58,10 @@ public class ConfigParamEntity extends InfraBaseEntity {
     @Column(comment = "最大重试次数" , type = MySqlTypeConstant.INT)
     @TableField("max_retries")
     private int maxRetries = 0;
+
+    @Column(comment = "厂商发送数据上限" , type = MySqlTypeConstant.INT)
+    @TableField("maximum")
+    private int maximum ;
 
     @Column(comment = "配置类型" , length = 64 , type = MySqlTypeConstant.VARCHAR)
     @TableField("config_type")

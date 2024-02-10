@@ -1,7 +1,9 @@
 package com.alinesno.infra.base.notice;
 
+import com.alineson.infra.base.notice.third.config.CustomSms4jConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * 集成一个Java开发示例工具
@@ -12,7 +14,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BaseNoticeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BaseNoticeApplication.class, args);
+		ConfigurableApplicationContext context =  SpringApplication.run(BaseNoticeApplication.class, args);
+		System.out.println("------->>>>>>>>>>>>>>>>> " + context.getBean(CustomSms4jConfig.class));
 	}
 
 }
