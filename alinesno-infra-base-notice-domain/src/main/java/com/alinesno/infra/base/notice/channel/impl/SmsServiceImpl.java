@@ -7,6 +7,7 @@ import org.dromara.sms4j.api.SmsBlend;
 import org.dromara.sms4j.api.entity.SmsResponse;
 import org.dromara.sms4j.core.factory.SmsFactory;
 import org.springframework.stereotype.Component;
+import org.springframework.util.Assert;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -23,6 +24,8 @@ public class SmsServiceImpl implements SmsService {
     public SmsNoticeResponse sendMessage(String phone, String message , String configId) {
 
         SmsBlend smsBlend = SmsFactory.getSmsBlend(configId);
+        Assert.notNull(smsBlend , "短信服务配置["+configId+"]不存在");
+
         SmsResponse smsResponse = smsBlend.sendMessage(phone ,message);
 
         log.debug("smsResponse = {}" , smsResponse.getData());
@@ -39,6 +42,9 @@ public class SmsServiceImpl implements SmsService {
         }
 
         SmsBlend smsBlend = SmsFactory.getSmsBlend(configId);
+
+        Assert.notNull(smsBlend , "短信服务配置["+configId+"]不存在");
+
         SmsResponse smsResponse = smsBlend.sendMessage(phone ,messageMap);
 
         log.debug("smsResponse = {}" , smsResponse.getData());
