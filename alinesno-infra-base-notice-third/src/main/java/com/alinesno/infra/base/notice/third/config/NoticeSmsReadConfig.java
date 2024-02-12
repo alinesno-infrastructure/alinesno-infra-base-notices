@@ -77,13 +77,13 @@ public class NoticeSmsReadConfig implements SmsReadConfig {
      * @return
      */
     public static BaseConfig convertConfigFromParam(ConfigParamEntity paramEntity) {
-        String type = paramEntity.getConfigId();
+        String type = paramEntity.getConfigType();
 
         if (type.equals(ALIYUN.getCode())) {
             // 阿里云配置
             AlibabaConfig alibabaConfig = new AlibabaConfig();
 
-            alibabaConfig.setConfigId(type);
+            alibabaConfig.setConfigId(paramEntity.getConfigId());
             alibabaConfig.setAccessKeyId(paramEntity.getAccessKeyId());
             alibabaConfig.setAccessKeySecret(paramEntity.getAccessKeySecret());
             alibabaConfig.setSignature(paramEntity.getSignature());

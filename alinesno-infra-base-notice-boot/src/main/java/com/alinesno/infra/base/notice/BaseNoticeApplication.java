@@ -1,7 +1,10 @@
 package com.alinesno.infra.base.notice;
 
+import com.alinesno.infra.base.notice.entity.ConfigParamEntity;
+import com.alinesno.infra.base.notice.service.IConfigParamService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * 集成一个Java开发示例工具
