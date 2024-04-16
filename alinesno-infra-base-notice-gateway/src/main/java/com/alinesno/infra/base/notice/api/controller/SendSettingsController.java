@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = "Send Settings")
 @RestController
 @Scope(SpringInstanceScope.PROTOTYPE)
-@RequestMapping("/api/infra/base/sendSettings/SendSettings")
+@RequestMapping("/api/infra/base/notice/settings")
 public class SendSettingsController extends BaseController<SendSettingsEntity, ISendSettingsService> {
 
 	// 日志记录

@@ -136,6 +136,62 @@ export const constantRoutes = [
         meta: { title: '创建负载均衡', icon: 'dashboard', affix: true }
       },
 
+      // >>>>>>>>>>>>>> message_router_start >>>>>>>>>>>>>>>>>>>>>
+      {
+        path: '/base/notice/alert/index',
+        component: () => import('@/views/base/notice/alert/index'),
+        name: '/base/notice/alert/index',
+        meta: { title: '告警配置', icon: 'dashboard', affix: true }
+      }, 
+      {
+        path: '/base/notice/application/index',
+        component: () => import('@/views/base/notice/application/index'),
+        name: '/base/notice/application/index',
+        meta: { title: '应用管理', icon: 'dashboard', affix: true }
+      }, 
+      {
+        path: '/base/notice/analyse/index',
+        component: () => import('@/views/base/notice/analyse/index'),
+        name: '/base/notice/analyse/index',
+        meta: { title: '识别分析', icon: 'dashboard', affix: true }
+      }, 
+      // {
+      //   path: '/base/notice/topic/index',
+      //   component: () => import('@/views/base/notice/topic/index'),
+      //   name: '/base/notice/topic/index',
+      //   meta: { title: '主题管理', icon: 'dashboard', affix: true }
+      // }, 
+      // {
+      //   path: '/base/notice/sendMessage/index',
+      //   component: () => import('@/views/base/notice/sendMessage/index'),
+      //   name: '/base/notice/sendMessage/index',
+      //   meta: { title: '消息管理', icon: 'dashboard', affix: true }
+      // }, 
+      {
+        path: '/base/notice/sendHistory/index',
+        component: () => import('@/views/base/notice/sendHistory/index'),
+        name: '/base/notice/sendHistory/index',
+        meta: { title: '异常消息', icon: 'dashboard', affix: true }
+      }, 
+      {
+        path: '/base/notice/settings/index',
+        component: () => import('@/views/base/notice/settings/index'),
+        name: '/base/notice/settings/index',
+        meta: { title: '渠道配置', icon: 'dashboard', affix: true }
+      }, 
+      {
+        path: '/base/notice/send/index',
+        component: () => import('@/views/base/notice/send/index'),
+        name: '/base/notice/send/index',
+        meta: { title: '操作记录', icon: 'dashboard', affix: true }
+      }, 
+      {
+        path: '/base/notice/apiRecord/index',
+        component: () => import('@/views/base/notice/apiRecord/index'),
+        name: '/base/notice/apiRecord/index',
+        meta: { title: '操作记录', icon: 'dashboard', affix: true }
+      } 
+      // >>>>>>>>>>>>>> message_router_end   >>>>>>>>>>>>>>>>>>>>>
 
     ]
   },

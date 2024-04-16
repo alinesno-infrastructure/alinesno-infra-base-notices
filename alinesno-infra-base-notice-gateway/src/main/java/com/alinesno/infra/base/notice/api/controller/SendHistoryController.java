@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = "Send History")
 @RestController
 @Scope(SpringInstanceScope.PROTOTYPE)
-@RequestMapping("/api/infra/base/sendHistory/SendHistory")
+@RequestMapping("/api/infra/base/notice/sendHistory")
 public class SendHistoryController extends BaseController<SendHistoryEntity, ISendHistoryService> {
 
 	// 日志记录
