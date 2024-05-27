@@ -8,13 +8,13 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/dev_alinesno_infra_base_notices_v100?serverTimezone=GMT%2B8&zeroDateTimeBehavior=CONVERT_TO_NULL
-    username: root
-    password: adminer
+    username: llf1
+    password: 123456
   data:
     redis:
       host: 127.0.0.1
       port: 6379
-      password: aip@local
+      password: 123456
   devtools:
     restart:
       enabled: true
